@@ -1,3 +1,0 @@
-# GrandMark website
-
-Survey site.
