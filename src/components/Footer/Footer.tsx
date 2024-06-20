@@ -8,6 +8,10 @@ const FooterWrapper = styled.footer`
   padding: 1rem 2rem;
   background-color: green;
   color: #fff;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  bottom: 0;
 `;
 
 const NavWrapper = styled.nav`

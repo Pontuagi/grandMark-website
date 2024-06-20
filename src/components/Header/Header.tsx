@@ -6,11 +6,12 @@ const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 1rem 2rem;
   background-color: green;
   color: #fff;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 `;
 
 const Logo = styled.div`
