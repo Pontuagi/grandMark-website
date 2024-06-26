@@ -19,7 +19,7 @@ const Title = styled.h1`
     font-size: 24px;
     font-weight: 700;
     margin: 10px 0 20px;
-    color: green;
+    color: var(--green);
     font-family: Montserrat, sans-serif;
 `
 

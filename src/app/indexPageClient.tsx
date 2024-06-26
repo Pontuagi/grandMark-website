@@ -37,7 +37,7 @@ const HomeContainer = styled.div`
 const HomeText = styled.p`
     font-size: 24px;
     line-height: 1.7;
-    color: var (--black);
+    color: #f5f5f5;
     font-family: Montserrat, sans-serif;
     font-weight: bold;
 
