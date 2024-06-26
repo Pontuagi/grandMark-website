@@ -36,10 +36,14 @@ const HomeContainer = styled.div`
 
 const HomeText = styled.p`
     font-size: 24px;
-    line-height: 1.5;
-    color: black;
+    line-height: 1.7;
+    color: var (--black);
     font-family: Montserrat, sans-serif;
     font-weight: bold;
+
+    span {
+        font-size: 28px;
+    }
 `;
 
 const ServiceSection = styled.div`
@@ -56,9 +60,9 @@ const Home: React.FC = () => {
         <PageContainer>
             <Header />
             <Content>
-                <HomeContainer>
+                <HomeContainer id="about">
                     <HomeText>
-                    Welcome to GrandMark Solutions limited, Your Trusted Geospatial Experts. <br/> <br/>
+                    <span>Welcome to GrandMark Solutions limited, Your Trusted Geospatial Experts.</span> <br/> <br/>
                     At Grandmark, we specialize in providing accurate and reliable geospatial services to meet all your needs.
                     Whether you're a homeowner, developer, or contractor, we have the expertise and technology to deliver precise results on time and within budget
                     </HomeText>
