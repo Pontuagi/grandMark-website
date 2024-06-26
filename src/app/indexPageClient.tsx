@@ -20,7 +20,7 @@ const PageContainer = styled.div`
 const Content = styled.div`
     max-width: 800px;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 150px;
 `;
 
 const HomeContainer = styled.div`
@@ -28,10 +28,10 @@ const HomeContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f5f5f5;
+    background-color: var(--blue);
     padding: 50px;
     border-radius: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 `;
 
 const HomeText = styled.p`
@@ -46,8 +46,9 @@ const ServiceSection = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 70px;
     justify-content: center;
+    margin-bottom: 100px;
 `;
 
 const Home: React.FC = () => {
@@ -82,10 +83,6 @@ const Home: React.FC = () => {
                     content="Provide layout and verification services during construction to ensure adherence to plans and specifications."
                 />
                  <ServiceCard
-                    title="Subdivision Surveys"
-                    content="We divide large tracts of land into smaller parcels while complying with local regulations and zoning requirements."
-                />
-                 <ServiceCard
                     title="Sectional Properties Surveys"
                     content="Sectional properties provide a unique real estate ownership model that combines individual ownership with shared amenities and responsibilities. 
                     Understanding the legal structure, benefits, and considerations of sectional properties is crucial for potential buyers, investors, and tenants.
@@ -95,6 +92,10 @@ const Home: React.FC = () => {
                     title="Drones Surveys"
                     content="UAV mapping technology continues to innovate across industries, offering scalable mapping, surveying, monitoring, and inspection solutions.
                     By harnessing the power of drones and advanced software, our organization gains valuable insights, and improves workflows, thus allowing our clients to make data-driven decisions with confidence."
+                />
+                <ServiceCard
+                    title="Subdivision Surveys"
+                    content="We divide large tracts of land into smaller parcels while complying with local regulations and zoning requirements."
                 />
             </ServiceSection>
             <Heading id="choose" heading="Why choose us" />

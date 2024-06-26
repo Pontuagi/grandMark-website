@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ChooseCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  border: 2px solid #007bff;
+  border: 3px solid #007bff;
   border-radius: 15px;
   padding: 25px;
   margin: 20px 0;
@@ -18,16 +18,16 @@ export const ChooseCardContainer = styled.div`
 
 export const ChooseCardHeader = styled.h3`
   margin: 0 0 10px 0;
-  font-size: 1.6em;
-  color: #007bff;
+  font-size: 27px;
+  color: var(--blue);
   text-align: center;
   padding: 15px 0;
 `;
 
 export const ChooseCardContent = styled.p`
   margin: 0;
-  font-size: 1.1em;
-  color: #444;
+  font-size: 23px;
+  color: var(--white);
   margin-bottom: 25px;
   text-align: center;
 `;

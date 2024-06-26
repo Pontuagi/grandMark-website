@@ -6,8 +6,8 @@ const FooterWrapper = styled.footer`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: green;
-  color: #fff;
+  background-color: var(--green);
+  color: var(--white);
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -25,8 +25,9 @@ const NavWrapper = styled.nav`
       margin-left: 2rem;
 
       a {
-        color: #fff;
+        color: var(--white);
         text-decoration: none;
+        font-weight: bold;
 
         &:hover {
           text-decoration: underline;

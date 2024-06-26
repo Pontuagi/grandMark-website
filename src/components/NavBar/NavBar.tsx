@@ -10,13 +10,15 @@ const NavWrapper = styled.nav`
 
     li {
       margin-left: 2rem;
+      font-weight: bold;
 
       a {
-        color: #333;
+        color: var(--white);
         text-decoration: none;
 
         &:hover {
-          text-decoration: underline;
+          color: var(--black);
+          text-decoration: underline var(--blue);
         }
       }
     }
