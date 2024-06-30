@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const ButtonContainer = styled.div`
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,11 +45,16 @@ const Line3 = styled(Line)<{ isOpen: boolean }>`
     transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'translateY(6px)')};
 `;
 
-const Button: React.FC = () => {
+interface SidemenuButtonProps {
+    toggleSidemenu: () => void;
+}
+
+const SidemenuButton: React.FC<SidemenuButtonProps> = ({ toggleSidemenu }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleButton = () => {
         setIsOpen(!isOpen);
+        toggleSidemenu();
     };
 
     return (
@@ -66,4 +72,4 @@ const Button: React.FC = () => {
     );
 }
 
-export default Button;
+export default SidemenuButton;

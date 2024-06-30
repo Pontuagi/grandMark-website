@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Navbar from '../NavBar/NavBar';
-import Button from '../SidemenuButton/SidemenuButton';
+import SidemenuButton from '../SidemenuButton/SidemenuButton';
 import Sidemenu from '../Sidemenu/Sidemenu';
 import breakpoints from '@/constants/breakpoints';
 
@@ -30,11 +30,44 @@ const LogoImg = styled.img`
   border-radius: 10px;
 `;
 
+const TabletOnly = styled.div`
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+  }
+  @media (min-width: ${breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const NavBarContainer = styled.div`
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
+  @media (min-width: ${breakpoints.tablet}) {
+    display: block;
+  }
+  `;
+
 const Header: React.FC = () => {
+  const [isSidemenuOpen, setIsSidemenuOpen] = useState(false);
+
+  const toggleSidemenu = () => {
+    setIsSidemenuOpen(!isSidemenuOpen);
+  };
+
   return (
     <HeaderWrapper>
       <Logo><LogoImg src="/images/logo.png" alt="Logo" /></Logo>
-      <Navbar />
+      
+      <NavBarContainer>
+        <Navbar />
+      </NavBarContainer>
+      
+      <TabletOnly>
+        <SidemenuButton toggleSidemenu={toggleSidemenu} />
+        {isSidemenuOpen && <Sidemenu />}
+      </TabletOnly>
+    
     </HeaderWrapper>
   );
 }

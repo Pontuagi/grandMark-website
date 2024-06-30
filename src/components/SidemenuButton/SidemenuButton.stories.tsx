@@ -1,12 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Button from './SidemenuButton';
+import SidemenuButton from './SidemenuButton';
 
 export default {
   title: 'Components/SideMenuButton',
-  component: Button,
+  component: SidemenuButton,
 } as Meta;
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof SidemenuButton>;
 
 export const Default: Story = {
     args: {},
