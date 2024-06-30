@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../NavBar/NavBar';
+import Button from '../SidemenuButton/SidemenuButton';
+import Sidemenu from '../Sidemenu/Sidemenu';
+import breakpoints from '@/constants/breakpoints';
 
 const HeaderWrapper = styled.header`
   display: flex;
