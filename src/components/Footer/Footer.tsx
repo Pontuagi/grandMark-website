@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import breakpoints from '@/constants/breakpoints';
 
 const FooterWrapper = styled.footer`
   display: flex;
@@ -12,6 +13,11 @@ const FooterWrapper = styled.footer`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   bottom: 0;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 const NavWrapper = styled.nav`
@@ -30,10 +36,18 @@ const NavWrapper = styled.nav`
         font-weight: bold;
 
         &:hover {
-          text-decoration: underline;
-          color: var(--black);
+          color: var(--dark-blue);
         }
       }
+        &:hover::after {
+          content: '';
+          position: absolute;
+          left: -10%;
+          bottom: -2px;
+          width: 120%;
+          height: 3px;
+          background-color: var(--dark-blue);
+        }
     }
   }
 `;

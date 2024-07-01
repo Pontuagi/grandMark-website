@@ -22,7 +22,6 @@ const HeaderWrapper = styled.header`
   z-index: 900;
 
    @media (max-width: ${breakpoints.tablet}) {
-    max-height: 200px;
     overflow: visible;
    }
 `;
@@ -39,7 +38,6 @@ const LogoImg = styled.img`
 const SidemenuContainer = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     display: block;
-    right: 0;
   }
   @media (min-width: ${breakpoints.tablet}) {
     display: none;

@@ -15,7 +15,7 @@ const Container = styled.div`
     right: 0;
     z-index: 1000;
     border-radius: 20px;
-    border: 2px solid var(--white);
+    border: 3px solid var(--white);
 `;
 
 const MenuContainer = styled.li`
@@ -32,7 +32,7 @@ const MenuText = styled.a`
     position: relative;
 
     &:hover {
-        color: var(--blue);
+        color: var(--dark-blue);
     }
 
     &:hover::after {
@@ -42,7 +42,7 @@ const MenuText = styled.a`
         bottom: -2px;
         width: 120%;
         height: 3px;
-        background-color: var(--blue);
+        background-color: var(--dark-blue);
     }
 `;
 

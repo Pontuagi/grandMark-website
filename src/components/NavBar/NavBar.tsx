@@ -17,8 +17,8 @@ const NavWrapper = styled.nav`
         text-decoration: none;
 
         &:hover {
-          color: var(--black);
-          text-decoration: underline var(--blue);
+          color: var(--dark-blue);
+          text-decoration: underline var(--dark-blue);
         }
       }
     }
