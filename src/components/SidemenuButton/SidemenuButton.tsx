@@ -13,6 +13,9 @@ const ButtonContainer = styled.div`
     box-shadow: 0 0 5px 2px rgba(0, 128, 0, 0.2);
     cursor: pointer;
     position: relative;
+    z-index: 999;
+    border: 2px solid var(--white);
+
     &:hover {
         box-shadow: 0 0 10px 4px rgba(0, 128, 0, 0.3);
     }

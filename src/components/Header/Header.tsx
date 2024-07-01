@@ -19,6 +19,12 @@ const HeaderWrapper = styled.header`
   border-bottom-right-radius: 10px;
   max-width: 1200px;
   margin: 0 auto;
+  z-index: 900;
+
+   @media (max-width: ${breakpoints.tablet}) {
+    max-height: 200px;
+    overflow: visible;
+   }
 `;
 
 const Logo = styled.div`
@@ -30,9 +36,10 @@ const LogoImg = styled.img`
   border-radius: 10px;
 `;
 
-const TabletOnly = styled.div`
+const SidemenuContainer = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     display: block;
+    right: 0;
   }
   @media (min-width: ${breakpoints.tablet}) {
     display: none;
@@ -63,10 +70,10 @@ const Header: React.FC = () => {
         <Navbar />
       </NavBarContainer>
       
-      <TabletOnly>
+      <SidemenuContainer>
         <SidemenuButton toggleSidemenu={toggleSidemenu} />
         {isSidemenuOpen && <Sidemenu />}
-      </TabletOnly>
+      </SidemenuContainer>
     
     </HeaderWrapper>
   );

@@ -3,13 +3,19 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     display: flex;
-    background-color: green;
+    background-color: var(--green);
     height: 400px;
     width: 370px;
     padding: 40px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 1000;
+    border-radius: 20px;
+    border: 2px solid var(--white);
 `;
 
 const MenuContainer = styled.li`
@@ -26,7 +32,7 @@ const MenuText = styled.a`
     position: relative;
 
     &:hover {
-        color: blue;
+        color: var(--blue);
     }
 
     &:hover::after {
@@ -36,7 +42,7 @@ const MenuText = styled.a`
         bottom: -2px;
         width: 120%;
         height: 3px;
-        background-color: blue;
+        background-color: var(--blue);
     }
 `;
 
