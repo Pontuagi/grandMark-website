@@ -27,7 +27,7 @@ export const ChooseCardHeader = styled.h3`
 export const ChooseCardContent = styled.p`
   margin: 0;
   font-size: 23px;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 25px;
   text-align: center;
 `;

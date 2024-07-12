@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import React, { ReactNode } from 'react';
 
-export const SectionCardContainer = styled.div`
+const SectionCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   border: 3px solid var(--green);
@@ -16,7 +17,7 @@ export const SectionCardContainer = styled.div`
   }
 `;
 
-export const SectionCardHeader = styled.h2`
+const SectionCardHeader = styled.h2`
   margin: 0 0 8px 0;
   font-size: 27px;
   color: var(--green);
@@ -24,23 +25,38 @@ export const SectionCardHeader = styled.h2`
   padding: 20px 0;
 `;
 
-export const SectionCardContent = styled.p`
+const SectionCardContent = styled.p`
   margin: 0;
   font-size: 23px;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 20px;
   text-align: center;
+`;
+
+const IconCont = styled.div`
+  margin-bottom: 37px;
+  display: flex;
+  justify-content: center;
+`;
+
+const Icon = styled.img`
+  width: 51px;
+  height: auto;
 `;
 
 interface SectionCardProps {
   title: string;
   content: string;
+  source: string;
 }
 
-const SectionCard: React.FC<SectionCardProps> = ({ title, content }) => {
+const SectionCard: React.FC<SectionCardProps> = ({ title, content, source }) => {
   return (
     <SectionCardContainer>
       <SectionCardHeader>{title}</SectionCardHeader>
+      <IconCont>
+        <Icon src={source} alt="Grandmark"/>
+      </IconCont>
       <SectionCardContent>{content}</SectionCardContent>
     </SectionCardContainer>
   );

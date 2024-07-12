@@ -28,22 +28,36 @@ const HomeContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--blue);
+    /*background-color: var(--blue);*/
     padding: 50px;
-    border-radius: 30px;
     margin-bottom: 80px;
 `;
 
 const HomeText = styled.p`
-    font-size: 24px;
+    font-size: 23px;
     line-height: 1.7;
-    color: #f5f5f5;
+    color: var(--black);
     font-family: Montserrat, sans-serif;
-    font-weight: bold;
 
     span {
-        font-size: 28px;
+        margin-bottom: 17px;
+        font-weight: bold;
+        color: var(--blue);
+        font-size: 32px;
     }
+`;
+
+const ImageCont = styled.div`
+    width: 100%;
+    position: relative;
+`;
+
+const HomeImage = styled.img`
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 `;
 
 const ServiceSection = styled.div`
@@ -55,55 +69,66 @@ const ServiceSection = styled.div`
     margin-bottom: 100px;
 `;
 
+
 const Home: React.FC = () => {
     return (
         <PageContainer>
             <Header />
             <Content>
+                <ImageCont>
+                    <HomeImage src='/Grandmark_entry.png' alt='grandmark'/>
+                </ImageCont>
                 <HomeContainer id="about">
                     <HomeText>
-                    <span>Welcome to GrandMark Solutions limited, Your Trusted Geospatial Experts.</span> <br/> <br/>
+                    <span>GrandMark Solutions limited Your Trusted Geospatial Experts.</span> <br/> <br/>
                     At Grandmark, we specialize in providing accurate and reliable geospatial services to meet all your needs.
                     Whether you're a homeowner, developer, or contractor, we have the expertise and technology to deliver precise results on time and within budget
                     </HomeText>
                 </HomeContainer>
             </Content>
-            <Heading id="services" heading="Our Services" />
-            <ServiceSection>
+            <Heading heading="Our Services" />
+            <ServiceSection id="services" >
                 <ServiceCard
                     title="Boundary Surveys"
                     content="We accurately determine property lines and boundaries to prevent legal disputes and ensure proper land use."
+                    source="/frame.png"
                 />
                  <ServiceCard
                     title="Topographic Surveys"
+                    source="/hill.png"
                     content="We identify natural and man-made features of your land, essential for design and construction projects."
                 />
                  <ServiceCard
                     title="Land Titling"
+                    source="/document.png"
                     content="We comply with standards set by the Land Registration Acts for property transactions including transfers, renewal, and extension of leases, production of deed plans, and RIMs….."
                 />
                  <ServiceCard
                     title="Engineering Surveys"
+                    source="/3d-scanner.png"
                     content="Provide layout and verification services during construction to ensure adherence to plans and specifications."
                 />
                  <ServiceCard
                     title="Sectional Properties Surveys"
+                    source="/separation.png"
                     content="Sectional properties provide a unique real estate ownership model that combines individual ownership with shared amenities and responsibilities. 
                     Understanding the legal structure, benefits, and considerations of sectional properties is crucial for potential buyers, investors, and tenants.
                     We at Grandmark will do this for you."
                 />
                  <ServiceCard
                     title="Drones Surveys"
+                    source="/drone.png"
                     content="UAV mapping technology continues to innovate across industries, offering scalable mapping, surveying, monitoring, and inspection solutions.
                     By harnessing the power of drones and advanced software, our organization gains valuable insights, and improves workflows, thus allowing our clients to make data-driven decisions with confidence."
                 />
                 <ServiceCard
                     title="Subdivision Surveys"
+                    source="/part.png"
                     content="We divide large tracts of land into smaller parcels while complying with local regulations and zoning requirements."
                 />
             </ServiceSection>
-            <Heading id="choose" heading="Why choose us" />
-            <ServiceSection>
+            <Heading heading="Why choose us" />
+            <ServiceSection id="choose">
                 <ChooseCard
                     title='Experience'
                     content='With over 5 years of experience, we deeply understand local regulations and industry standards.'
