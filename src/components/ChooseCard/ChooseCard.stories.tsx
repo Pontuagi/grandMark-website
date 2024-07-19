@@ -10,6 +10,8 @@ type Story = StoryObj<typeof ChooseCard>;
 
 export const Default: Story = {
   args: {
+    imageSrc: '/drone.png',
+    imageAlt: 'alt_image',
     title: 'Choose Card',
     content: 'This is a choose card component',
   },
