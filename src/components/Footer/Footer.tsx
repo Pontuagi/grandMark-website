@@ -10,8 +10,8 @@ const FooterWrapper = styled.footer`
   background-color: var(--green);
   color: var(--white);
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   bottom: 0;
 
   @media (max-width: ${breakpoints.tablet}) {
@@ -25,7 +25,7 @@ const NavWrapper = styled.nav`
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-right: 30px;
 
     li {
       margin-left: 2rem;

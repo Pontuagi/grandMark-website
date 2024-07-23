@@ -4,13 +4,12 @@ import styled from "styled-components";
 const ContactCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  border: 3px solid var(--green);
   border-radius: 20px;
   padding: 30px;
   margin: 16px 0;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s;
-  max-width: 1000px;
+  max-width: 800px;
 
   &:hover {
     transform: translateY(-5px);
@@ -28,7 +27,7 @@ const ContactCardHeader = styled.h2`
 const ContactCardContent = styled.p`
   margin: 0;
   font-size: 23px;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 20px;
   text-align: center;
 `;
@@ -36,7 +35,7 @@ const ContactCardContent = styled.p`
 const ContactCardDetails = styled.div`
   margin: 0;
   font-size: 18px;
-  color: var(--white);
+  color: var(--black);
   text-align: center;
 
   & > p {
