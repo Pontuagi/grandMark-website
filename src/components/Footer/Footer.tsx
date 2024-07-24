@@ -64,8 +64,8 @@ const Footer: React.FC = () => {
       </NavWrapper>
       <NavWrapper>
         <ul>
-          <li><a href="#privacy">Privacy</a></li>
-          <li><a href="#terms">Terms</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
           <li><a href="#company">Company Policy</a></li>
         </ul>
       </NavWrapper>
