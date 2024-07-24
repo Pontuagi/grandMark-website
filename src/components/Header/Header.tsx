@@ -24,6 +24,10 @@ const HeaderWrapper = styled.header`
    @media (max-width: ${breakpoints.tablet}) {
     overflow: visible;
    }
+
+   a {
+    margin-left: 20px;
+   }
 `;
 
 const Logo = styled.div`
@@ -32,7 +36,8 @@ const Logo = styled.div`
 
 const LogoImg = styled.img`
   width: 100%;
-  border-radius: 10px;
+  border-radius: 50%;
+  border: 2px var(--blue);
 `;
 
 const SidemenuContainer = styled.div`
@@ -62,7 +67,7 @@ const Header: React.FC = () => {
 
   return (
     <HeaderWrapper>
-      <Logo><LogoImg src="/images/logo.png" alt="Logo" /></Logo>
+      <a href="/"><Logo><LogoImg src="/images/logo.png" alt="Logo" /></Logo></a>
       
       <NavBarContainer>
         <Navbar />
