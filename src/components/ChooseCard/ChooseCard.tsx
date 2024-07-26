@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoints from '@/constants/breakpoints';
 
 const ChooseCardContainer = styled.div`
   display: flex;
@@ -15,6 +16,11 @@ const ChooseCardContainer = styled.div`
   &:hover {
     transform: translateY(-10px);
   }
+
+  @media screen and (max-width: ${breakpoints.desktop}) {
+    max-width: 320px;
+    padding: 15px;
+  }
 `;
 
 const ChooseCardHeader = styled.h3`
@@ -23,6 +29,10 @@ const ChooseCardHeader = styled.h3`
   color: var(--blue);
   text-align: center;
   padding: 15px 0;
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    font-size: 24px;
+  }
 `;
 
 const ChooseCardContent = styled.p`
@@ -31,6 +41,10 @@ const ChooseCardContent = styled.p`
   color: var(--black);
   margin-bottom: 25px;
   text-align: center;
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    font-size: 17px;
+  }
 `;
 
 const ChooseCardImage = styled.img`

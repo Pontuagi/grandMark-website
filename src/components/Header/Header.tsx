@@ -15,8 +15,8 @@ const HeaderWrapper = styled.header`
   padding: 1rem 2rem;
   background-color: var(--green);
   color: var(--white);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
   max-width: 1200px;
   margin: 0 auto;
   z-index: 900;

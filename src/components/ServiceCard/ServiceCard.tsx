@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import React, { ReactNode } from 'react';
+import breakpoints from '@/constants/breakpoints';
+
 
 const SectionCardContainer = styled.div`
   display: flex;
@@ -15,6 +17,11 @@ const SectionCardContainer = styled.div`
   &:hover {
     transform: translateY(-5px);
   }
+
+  @media screen and (max-width: ${breakpoints.desktop}) {
+    max-width: 300px;
+    padding: 15px;
+  }
 `;
 
 const SectionCardHeader = styled.h2`
@@ -23,6 +30,10 @@ const SectionCardHeader = styled.h2`
   color: var(--green);
   text-align: center;
   padding: 20px 0;
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    font-size: 24px;
+  }
 `;
 
 const SectionCardContent = styled.p`
@@ -31,6 +42,10 @@ const SectionCardContent = styled.p`
   color: var(--black);
   margin-bottom: 20px;
   text-align: center;
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    font-size: 18px;
+  }
 `;
 
 const IconCont = styled.div`
