@@ -5,11 +5,11 @@ const ChooseCardContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 3px solid #007bff;
+  border: 1px solid #007bff;
   border-radius: 15px;
   padding: 25px;
   margin: 20px 0;
-  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
   max-width: 420px;
 

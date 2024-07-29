@@ -130,7 +130,7 @@ const ContactCard: React.FC = () => {
           Email:<span>grandmarksolutionsltd@gmail.com</span>
         </p>
         <p>
-          Tel No:<span>+25423988691</span>
+          Tel No:<span>+254723988691</span>
         </p>
       </ContactCardDetails>
       <ContactForm>

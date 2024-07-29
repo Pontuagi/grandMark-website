@@ -60,6 +60,7 @@ const HomeImage = styled.img`
   width: 100%;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
 `;
 
 const ServiceSection = styled.div`
