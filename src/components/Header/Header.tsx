@@ -17,9 +17,9 @@ const HeaderWrapper = styled.header`
   color: var(--white);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  max-width: 1200px;
-  margin: 0 auto;
+  /*max-width: 1200px;*/
   z-index: 900;
+
 
    @media (max-width: ${breakpoints.tablet}) {
     overflow: visible;
@@ -43,7 +43,9 @@ const LogoImg = styled.img`
 const SidemenuContainer = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     display: block;
+    padding-right: 30px;
   }
+
   @media (min-width: ${breakpoints.tablet}) {
     display: none;
   }
@@ -55,6 +57,7 @@ const NavBarContainer = styled.div`
   }
   @media (min-width: ${breakpoints.tablet}) {
     display: block;
+    padding-right: 50px;
   }
   `;
 
@@ -63,6 +66,10 @@ const Header: React.FC = () => {
 
   const toggleSidemenu = () => {
     setIsSidemenuOpen(!isSidemenuOpen);
+  };
+
+  const closeSidemenu = () => {
+    setIsSidemenuOpen(false);
   };
 
   return (
@@ -74,8 +81,8 @@ const Header: React.FC = () => {
       </NavBarContainer>
       
       <SidemenuContainer>
-        <SidemenuButton toggleSidemenu={toggleSidemenu} />
-        {isSidemenuOpen && <Sidemenu />}
+        <SidemenuButton isOpen={isSidemenuOpen} toggleSidemenu={toggleSidemenu} />
+        {isSidemenuOpen && <Sidemenu closeSidemenu={closeSidemenu} />}
       </SidemenuContainer>
     
     </HeaderWrapper>

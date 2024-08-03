@@ -5,7 +5,7 @@ const ChooseCardContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #007bff;
+  /*border: 1px solid #007bff;*/
   border-radius: 15px;
   padding: 25px;
   margin: 20px 0;

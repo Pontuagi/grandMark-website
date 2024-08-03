@@ -6,6 +6,8 @@ import Footer from '@/components/Footer/Footer'
 
 const Container = Styled.div`
     width: 100%;
+    display: flex;
+    margin: 0 auto;
 `
 
 const PrivacyContainer = Styled.div`
@@ -27,7 +29,7 @@ const PrivacyContainer = Styled.div`
 const Privacy: React.FC = () => {
     return (
         <Container>
-            <Header />
+        <Header />
         
         <PrivacyContainer>
         <h1>Privacy Policy</h1>

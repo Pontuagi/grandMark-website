@@ -6,7 +6,7 @@ import breakpoints from '@/constants/breakpoints';
 const SectionCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--green);
+  /*border: 1px solid var(--green);*/
   border-radius: 20px;
   padding: 30px;
   margin: 16px 0;

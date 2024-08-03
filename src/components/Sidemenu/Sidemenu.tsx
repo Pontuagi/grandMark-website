@@ -47,13 +47,13 @@ const MenuText = styled.a`
 `;
 
 
-const Sidemenu: React.FC = () => {
+const Sidemenu: React.FC<{ closeSidemenu: () => void }> = ({ closeSidemenu }) => {
     return (
         <Container>
-            <MenuContainer><MenuText href="#about">About</MenuText></MenuContainer>
-            <MenuContainer><MenuText href="#services"> Services</MenuText></MenuContainer>
-            <MenuContainer><MenuText href="#choose">Why Choose Us</MenuText></MenuContainer>
-            <MenuContainer><MenuText href="#contact">Contact</MenuText></MenuContainer>
+            <MenuContainer><MenuText href="#about" onClick={closeSidemenu}>About</MenuText></MenuContainer>
+            <MenuContainer><MenuText href="#services" onClick={closeSidemenu}> Services</MenuText></MenuContainer>
+            <MenuContainer><MenuText href="#choose" onClick={closeSidemenu}>Why Choose Us</MenuText></MenuContainer>
+            <MenuContainer><MenuText href="#contact" onClick={closeSidemenu}>Contact</MenuText></MenuContainer>
         </Container>
     );
 }

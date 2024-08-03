@@ -49,14 +49,15 @@ const Line3 = styled(Line)<{ isOpen: boolean }>`
 `;
 
 interface SidemenuButtonProps {
+    isOpen: boolean;
     toggleSidemenu: () => void;
 }
 
-const SidemenuButton: React.FC<SidemenuButtonProps> = ({ toggleSidemenu }) => {
-    const [isOpen, setIsOpen] = useState(false);
+const SidemenuButton: React.FC<SidemenuButtonProps> = ({ isOpen, toggleSidemenu }) => {
+    /*const [isOpen, setIsOpen] = useState(false);*/
 
     const toggleButton = () => {
-        setIsOpen(!isOpen);
+        /*setIsOpen(!isOpen);*/
         toggleSidemenu();
     };
 
