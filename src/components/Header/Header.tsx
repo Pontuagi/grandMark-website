@@ -17,7 +17,7 @@ const HeaderWrapper = styled.header`
   color: var(--white);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  /*max-width: 1200px;*/
+  max-width: 1200px;
   z-index: 900;
 
 

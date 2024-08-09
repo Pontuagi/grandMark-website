@@ -17,9 +17,11 @@ const ChooseCardContainer = styled.div`
     transform: translateY(-10px);
   }
 
-  @media screen and (max-width: ${breakpoints.desktop}) {
+  @media screen and (max-width: ${breakpoints.tablet}) {
     max-width: 320px;
-    padding: 15px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
 `;
 

@@ -8,13 +8,14 @@ import Footer from "../components/Footer/Footer";
 import ServiceCard from "../components/ServiceCard/ServiceCard";
 import ChooseCard from "@/components/ChooseCard/ChooseCard";
 import ContactCard from "@/components/ContactCard/ContactCard";
+import breakpoints from "@/constants/breakpoints";
 
 
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 17px;
   max-width: 1200px;
   margin: 0 auto;
 `;
@@ -31,12 +32,16 @@ const HomeContainer = styled.div`
   align-items: center;
   justify-content: center;
   /*background-color: var(--blue);*/
-  padding: 50px;
+  padding: 20px;
   margin-bottom: 80px;
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    margin-bottom: 10px;
+  }
 `;
 
 const HomeText = styled.p`
-  font-size: 23px;
+  font-size: 20px;
   line-height: 1.7;
   color: var(--black);
   font-family: Montserrat, sans-serif;
@@ -45,8 +50,17 @@ const HomeText = styled.p`
     margin-bottom: 17px;
     font-weight: bold;
     color: var(--blue);
-    font-size: 32px;
+    font-size: 28px;
   }
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    font-size: 15px;
+
+    span {
+      font-size: 20px;
+    }
+  }
+
 `;
 
 const ImageCont = styled.div`
@@ -67,9 +81,14 @@ const ServiceSection = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 70px;
+  gap: 30px;
   justify-content: center;
   margin-bottom: 100px;
+
+  @media screen and (max-width: ${breakpoints.tablet} (
+    gap: 30px;
+    margin-bottom: 50px;
+  )
 `;
 
 const Home: React.FC = () => {
