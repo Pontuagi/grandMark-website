@@ -5,11 +5,15 @@ import Header from '@/components/Header/Header';
 
 const Container = Styled.div`
     width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 1200px;
 `
 
 const TermsCont = Styled.div`
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: 200px auto;
     padding: 50px 20px 50px;
 
     h1 {

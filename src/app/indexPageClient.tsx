@@ -21,19 +21,28 @@ const PageContainer = styled.div`
 `;
 
 const Content = styled.div`
-  max-width: 800px;
+  max-width: 1100px;
   text-align: center;
   margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const HomeContainer = styled.div`
+ position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /*background-color: var(--blue);*/
-  padding: 20px;
-  margin-bottom: 80px;
+  /*padding: 20px;*/
+  margin-top: 100px;
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: translate(-50%, -50%);
 
   @media screen and (max-width: ${breakpoints.tablet}) {
     margin-bottom: 10px;
@@ -44,13 +53,14 @@ const HomeText = styled.p`
   font-size: 20px;
   line-height: 1.7;
   color: var(--black);
+  font-weight: bold;
   font-family: Montserrat, sans-serif;
 
   span {
     margin-bottom: 17px;
     font-weight: bold;
     color: var(--blue);
-    font-size: 28px;
+    font-size: 30px;
   }
 
   @media screen and (max-width: ${breakpoints.tablet}) {
@@ -60,12 +70,14 @@ const HomeText = styled.p`
       font-size: 20px;
     }
   }
-
 `;
 
 const ImageCont = styled.div`
   width: 100%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const HomeImage = styled.img`
@@ -73,7 +85,7 @@ const HomeImage = styled.img`
   background-position: center;
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
 `;
 
@@ -98,8 +110,7 @@ const Home: React.FC = () => {
       <Content>
         <ImageCont>
           <HomeImage src="/Grandmark_entry.png" alt="grandmark" />
-        </ImageCont>
-        <HomeContainer id="about">
+          <HomeContainer id="about">
           <HomeText>
             <span>
               GrandMark Solutions limited Your Trusted Geospatial Experts.
@@ -111,6 +122,23 @@ const Home: React.FC = () => {
             technology to deliver precise results on time and within budget
           </HomeText>
         </HomeContainer>
+        </ImageCont>
+        {/*
+
+        <HomeContainer id="about">
+          <HomeText>
+            <span>
+              GrandMark Solutions limited Your Trusted Geospatial Experts.
+            </span>{" "}
+            <br /> <br />
+            At Grandmark, we specialize in providing accurate and reliable
+            geospatial services to meet all your needs. Whether you're a
+            homeowner, developer, or contractor, we have the expertise and
+            technology to deliver precise results on time and within budget
+          </HomeText>
+          
+        </HomeContainer>
+        */}
       </Content>
       <Heading heading="Our Services" />
       <ServiceSection id="services">
