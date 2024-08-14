@@ -35,10 +35,6 @@ const ChooseCardHeader = styled.h3`
   @media screen and (max-width: ${breakpoints.mobile}) {
     font-size: 20px;
   }
-
-  @media screen and (max-width: ${breakpoints.tablet}) {
-    font-size: 24px;
-  }
 `;
 
 const ChooseCardContent = styled.p`
@@ -50,10 +46,6 @@ const ChooseCardContent = styled.p`
 
   @media screen and (max-width: ${breakpoints.mobile}) {
     font-size: 15px;
-  }
-
-  @media screen and (max-width: ${breakpoints.tablet}) {
-    font-size: 18px;
   }
 `;
 

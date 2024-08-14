@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const Container = styled.div`
     display: flex;
     background-color: var(--green);
-    height: 400px;
-    width: 370px;
+    height: 350px;
+    width: 320px;
     padding: 40px;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@ const Container = styled.div`
     top: 100px;
     right: 0;
     z-index: 1000;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 3px solid var(--white);
 `;
 

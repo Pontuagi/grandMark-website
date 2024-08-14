@@ -9,15 +9,13 @@ const HeaderWrapper = styled.header`
   display: flex;
   position: fixed;
   top: 0;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 1rem 2rem;
-  background-color: var(--green);
+  background-color: rgba(0, 128, 0, 0.8);
   color: var(--white);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  max-width: 1200px;
   z-index: 900;
 
 
@@ -30,8 +28,20 @@ const HeaderWrapper = styled.header`
    }
 `;
 
+const HeaderContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; 
+`;
+
 const Logo = styled.div`
   max-width: 100px;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    max-width: 70px;
+  }
 `;
 
 const LogoImg = styled.img`
@@ -74,17 +84,18 @@ const Header: React.FC = () => {
 
   return (
     <HeaderWrapper>
-      <a href="/"><Logo><LogoImg src="/images/logo.png" alt="Logo" /></Logo></a>
-      
-      <NavBarContainer>
-        <Navbar />
-      </NavBarContainer>
-      
-      <SidemenuContainer>
-        <SidemenuButton isOpen={isSidemenuOpen} toggleSidemenu={toggleSidemenu} />
-        {isSidemenuOpen && <Sidemenu closeSidemenu={closeSidemenu} />}
-      </SidemenuContainer>
-    
+      <HeaderContent>
+        <a href="/"><Logo><LogoImg src="/images/logo.png" alt="Logo" /></Logo></a>
+        
+        <NavBarContainer>
+          <Navbar />
+        </NavBarContainer>
+        
+        <SidemenuContainer>
+          <SidemenuButton isOpen={isSidemenuOpen} toggleSidemenu={toggleSidemenu} />
+          {isSidemenuOpen && <Sidemenu closeSidemenu={closeSidemenu} />}
+        </SidemenuContainer>
+      </HeaderContent>
     </HeaderWrapper>
   );
 }

@@ -6,15 +6,15 @@ const ButtonContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: green;
     border-radius: 50%;
     box-shadow: 0 0 5px 2px rgba(0, 128, 0, 0.2);
     cursor: pointer;
     position: relative;
     z-index: 999;
-    border: 2px solid var(--white);
+    /*border: 2px solid var(--white);*/
 
     &:hover {
         box-shadow: 0 0 10px 4px rgba(0, 128, 0, 0.3);

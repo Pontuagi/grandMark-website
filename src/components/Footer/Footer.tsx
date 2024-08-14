@@ -4,21 +4,28 @@ import breakpoints from '@/constants/breakpoints';
 
 const FooterWrapper = styled.footer`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   padding: 1rem 2rem;
-  background-color: var(--green);
+  background-color: rgba(0, 128, 0, 0.8);
   color: var(--white);
   width: 100%;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   bottom: 0;
+`;
+
+const FooterContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
 
   @media (max-width: ${breakpoints.tablet}) {
     flex-direction: column;
     gap: 20px;
   }
-`;
+`
 
 const NavWrapper = styled.nav`
   ul {
@@ -55,20 +62,22 @@ const NavWrapper = styled.nav`
 const Footer: React.FC = () => {
   return (
     <FooterWrapper>
-      <NavWrapper>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#services">Services</a></li>
-        </ul>
-      </NavWrapper>
-      <NavWrapper>
-        <ul>
-          <li><a href="/privacy">Privacy</a></li>
-          <li><a href="/terms">Terms</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </NavWrapper>
+      <FooterContent>
+        <NavWrapper>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#services">Services</a></li>
+          </ul>
+        </NavWrapper>
+        <NavWrapper>
+          <ul>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </NavWrapper>
+      </FooterContent>
     </FooterWrapper>
   );
 }
