@@ -9,7 +9,6 @@ const Container = Styled.div`
     display: flex;
     margin: 0 auto;
     flex-direction: column;
-    max-width: 1200px;
 `
 
 const PrivacyContainer = Styled.div`
