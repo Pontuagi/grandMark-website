@@ -29,14 +29,26 @@ const Content = styled.div`
   align-items: center;
 `;
 
+const ImageCont = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -170px;
+  }
+`;
+
 const HomeContainer = styled.div`
  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /*background-color: var(--blue);*/
-  /*padding: 20px;*/
   margin-top: 100px;
   top: 50%;
   left: 37%;
@@ -45,7 +57,11 @@ const HomeContainer = styled.div`
   transform: translate(-50%, -50%);
 
   @media screen and (max-width: ${breakpoints.tablet}) {
-    margin-bottom: 10px;
+    margin-top: 70px;
+    position: relative;
+    padding: 10px;
+    left: 50%;
+    top: 0;
   }
 `;
 
@@ -73,14 +89,6 @@ const HomeText = styled.p`
   }
 `;
 
-const ImageCont = styled.div`
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 const HomeImage = styled.img`
   background-size: cover;
   background-position: center;
@@ -98,10 +106,10 @@ const ServiceSection = styled.div`
   justify-content: center;
   margin-bottom: 100px;
 
-  @media screen and (max-width: ${breakpoints.tablet} (
+  @media screen and (max-width: ${breakpoints.tablet}){
     gap: 30px;
     margin-bottom: 50px;
-  )
+  }
 `;
 
 const FaqSection = styled.div`
@@ -119,16 +127,16 @@ const Home: React.FC = () => {
         <ImageCont>
           <HomeImage src="/survey.jpeg" alt="grandmark" />
           <HomeContainer id="about">
-          <HomeText>
-            <span>
-              GrandMark Solutions limited Your Trusted Geospatial Experts.
-            </span>{" "}
-            <br /> <br />
-            At Grandmark, we specialize in providing accurate and reliable
-            geospatial services to meet all your needs. Whether you're a
-            homeowner, developer, or contractor, we have the expertise and
-            technology to deliver precise results on time and within budget
-          </HomeText>
+            <HomeText>
+              <span>
+                GrandMark Solutions limited Your Trusted Geospatial Experts.
+              </span>{" "}
+              <br /> <br />
+              At Grandmark, we specialize in providing accurate and reliable
+              geospatial services to meet all your needs. Whether you're a
+              homeowner, developer, or contractor, we have the expertise and
+              technology to deliver precise results on time and within budget
+            </HomeText>
         </HomeContainer>
         </ImageCont>
         {/*

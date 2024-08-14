@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import breakpoints from "@/constants/breakpoints";
 
 const FAQContainer = styled.div`
-    /*margin: 20px 0;*/
     width: 100%;
 `;
 
@@ -30,6 +30,10 @@ const Question = styled.div`
     &:hover {
         background-color: var(--light-gray);
     }
+
+    @media screen and (max-width: ${breakpoints.mobile}){
+        font-size: 15px;
+    }
 `;
 
 const Icon = styled.span`
@@ -37,6 +41,10 @@ const Icon = styled.span`
     font-weight: bold;
     color: var(--green);
     margin-left: 27px;
+    
+    @media screen and (max-width: ${breakpoints.mobile}){
+        font-size: 22px;
+    }
 `;
 
 const Answer = styled.div`
@@ -46,6 +54,10 @@ const Answer = styled.div`
     padding: 30px 15px 15px;
     font-size: 16px;
     display: ${props => (props.isVisible ? 'block' : 'none')};
+
+    @media screen and (max-width: ${breakpoints.mobile}){
+        font-size: 14px;
+    }
 `;
 
 const FAQ: React.FC<{ question: string; answer: string }> = ({ question, answer }) => {

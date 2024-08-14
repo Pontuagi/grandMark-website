@@ -32,6 +32,10 @@ const ChooseCardHeader = styled.h3`
   text-align: center;
   padding: 15px 0;
 
+  @media screen and (max-width: ${breakpoints.mobile}) {
+    font-size: 20px;
+  }
+
   @media screen and (max-width: ${breakpoints.tablet}) {
     font-size: 24px;
   }
@@ -44,8 +48,12 @@ const ChooseCardContent = styled.p`
   margin-bottom: 25px;
   text-align: center;
 
+  @media screen and (max-width: ${breakpoints.mobile}) {
+    font-size: 15px;
+  }
+
   @media screen and (max-width: ${breakpoints.tablet}) {
-    font-size: 17px;
+    font-size: 18px;
   }
 `;
 

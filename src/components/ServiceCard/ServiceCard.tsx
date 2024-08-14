@@ -31,6 +31,10 @@ const SectionCardHeader = styled.h2`
   text-align: center;
   padding: 20px 0;
 
+  @media screen and (max-width: ${breakpoints.mobile}) {
+    font-size: 20px;
+  }
+
   @media screen and (max-width: ${breakpoints.tablet}) {
     font-size: 24px;
   }
@@ -43,6 +47,10 @@ const SectionCardContent = styled.p`
   margin-bottom: 20px;
   text-align: center;
 
+  @media screen and (max-width: ${breakpoints.mobile}) {
+    font-size: 15px;
+  }
+  
   @media screen and (max-width: ${breakpoints.tablet}) {
     font-size: 18px;
   }
