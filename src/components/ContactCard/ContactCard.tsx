@@ -1,18 +1,25 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import breakpoints from "@/constants/breakpoints";
 
 const ContactCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 30px;
   margin: 16px 0;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
 
   &:hover {
     transform: translateY(-5px);
+  }
+
+  @media screen and (max-width: ${breakpoints.tablet}){
+    max-width: 700px;
   }
 `;
 
@@ -22,6 +29,10 @@ const ContactCardHeader = styled.h2`
   color: var(--green);
   text-align: center;
   padding: 20px 0;
+  
+  @media screen and (max-width: ${breakpoints.tablet}){
+    font-size: 20px;
+  }
 `;
 
 const ContactCardContent = styled.p`
@@ -30,6 +41,11 @@ const ContactCardContent = styled.p`
   color: var(--black);
   margin-bottom: 20px;
   text-align: center;
+  padding: 30px;
+
+  @media screen and (max-width: ${breakpoints.tablet}){
+    font-size: 18px;
+  }
 `;
 
 const ContactCardDetails = styled.div`
@@ -86,6 +102,33 @@ const Button = styled.button`
   }
 `;
 
+const VisionCont = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  margin-top: 37px;
+
+  @media screen and (max-width: ${breakpoints.tablet}){
+    flex-direction: column;
+    gap: 35px;
+  }
+`;
+
+const Vision = styled.div`
+  width: 300px;
+  height: auto;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-weight: semi-bold;
+
+  span {
+    font-weight: bold;
+    font-size: 20px;
+  }
+`;
+
 const ContactCard: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -133,6 +176,7 @@ const ContactCard: React.FC = () => {
           Tel No:<span>+254723988691</span>
         </p>
       </ContactCardDetails>
+      {/*
       <ContactForm>
         <Form onSubmit={handleSubmit}>
           <Input
@@ -161,6 +205,23 @@ const ContactCard: React.FC = () => {
           <Button type="submit">Send</Button>
         </Form>
       </ContactForm>
+      */}
+      <VisionCont>
+        {/* Vision */}
+        <Vision>
+          <p>
+          <span>Vision Statement</span> <br /> <br/>
+          Our vision is to be the leading provider of geospatial services globally, recognized for our commitment to excellence, innovation, and sustainability. We aim to revolutionize how geospatial data is utilized across industries, driving positive change and creating a more connected and informed world.
+          </p>
+        </Vision>
+        {/* Mission */}
+        <Vision>
+          <p>
+            <span>Mission Statement </span><br/><br/> 
+            At Grandmark Solutions Limited, our mission is to empower businesses and communities through innovative geospatial solutions. We strive to deliver precise, reliable, and actionable geospatial data and insights, enabling our clients to make informed decisions, optimize operations, and foster sustainable growth.
+          </p>
+        </Vision>
+      </VisionCont>
     </ContactCardContainer>
   );
 };

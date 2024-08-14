@@ -15,15 +15,14 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 17px;
-  max-width: 1200px;
+  padding: 0px;
+  width: 100%;
   margin: 0 auto;
 `;
 
 const Content = styled.div`
-  max-width: 1100px;
+  width: 100%;
   text-align: center;
-  margin-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +38,7 @@ const HomeContainer = styled.div`
   /*padding: 20px;*/
   margin-top: 100px;
   top: 50%;
-  left: 50%;
+  left: 37%;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.7);
   transform: translate(-50%, -50%);
@@ -50,6 +49,7 @@ const HomeContainer = styled.div`
 `;
 
 const HomeText = styled.p`
+  padding: 0 25px;
   font-size: 20px;
   line-height: 1.7;
   color: var(--black);
@@ -93,7 +93,7 @@ const ServiceSection = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 70px;
   justify-content: center;
   margin-bottom: 100px;
 
@@ -107,9 +107,10 @@ const Home: React.FC = () => {
   return (
     <PageContainer>
       <Header />
+      
       <Content>
         <ImageCont>
-          <HomeImage src="/Grandmark_entry.png" alt="grandmark" />
+          <HomeImage src="/survey.jpeg" alt="grandmark" />
           <HomeContainer id="about">
           <HomeText>
             <span>
@@ -140,7 +141,9 @@ const Home: React.FC = () => {
         </HomeContainer>
         */}
       </Content>
+      
       <Heading heading="Our Services" />
+      
       <ServiceSection id="services">
         <ServiceCard
           title="Boundary Surveys"
@@ -181,7 +184,9 @@ const Home: React.FC = () => {
           content="We divide large tracts of land into smaller parcels while complying with local regulations and zoning requirements."
         />
       </ServiceSection>
+      
       <Heading heading="Why choose us" />
+      
       <ServiceSection id="choose">
         <ChooseCard
           imageSrc="/denno.jpeg"
@@ -210,6 +215,7 @@ const Home: React.FC = () => {
       </ServiceSection>
 
       <ContactCard />
+      
       <Footer />
     </PageContainer>
   );
