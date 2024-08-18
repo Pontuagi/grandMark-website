@@ -130,6 +130,8 @@ const Vision = styled.div`
 `;
 
 const ContactCard: React.FC = () => {
+
+{/*
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -157,6 +159,7 @@ const ContactCard: React.FC = () => {
       alert("Failed to send email.");
     }
   };
+  */}
   return (
     <ContactCardContainer>
       <ContactCardHeader id="contact">Contact Us</ContactCardHeader>

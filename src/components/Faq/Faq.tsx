@@ -47,7 +47,11 @@ const Icon = styled.span`
     }
 `;
 
-const Answer = styled.div`
+interface AnswerProps {
+    isVisible: boolean;
+  }
+
+const Answer = styled.div<AnswerProps>`
     background-color: var(--white);
     color: var(--dark-blue);
     margin-left: 20px;
