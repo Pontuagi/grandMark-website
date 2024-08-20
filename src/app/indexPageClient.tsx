@@ -48,6 +48,7 @@ const HomeContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 100px;
+  margin-bottom: 50px;
   top: 50%;
   left: 37%;
   border-radius: 5px;
@@ -70,6 +71,7 @@ const HomeText = styled.p`
   color: var(--black);
   font-weight: bold;
   font-family: Montserrat, sans-serif;
+  margin-bottom: 10px;
 
   span {
     margin-bottom: 17px;

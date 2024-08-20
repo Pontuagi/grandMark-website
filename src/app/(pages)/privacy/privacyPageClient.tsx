@@ -3,9 +3,10 @@ import React from "react";
 import Styled from "styled-components";
 
 const PrivacyContainer = Styled.div`
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 50px 20px 50px;
+    padding: 10px 20px 50px;
 
     h1 {
         text-align: center;
