@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import Navbar from '../NavBar/NavBar';
-import SidemenuButton from '../SidemenuButton/SidemenuButton';
-import Sidemenu from '../Sidemenu/Sidemenu';
-import breakpoints from '@/constants/breakpoints';
+"use client";
+
+import React, { useState } from "react";
+import styled from "styled-components";
+import Navbar from "../NavBar/NavBar";
+import SidemenuButton from "../SidemenuButton/SidemenuButton";
+import Sidemenu from "../Sidemenu/Sidemenu";
+import breakpoints from "@/constants/breakpoints";
 
 const HeaderWrapper = styled.header`
   display: flex;
@@ -18,14 +20,13 @@ const HeaderWrapper = styled.header`
   border-bottom-right-radius: 3px;
   z-index: 900;
 
-
-   @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.tablet}) {
     overflow: visible;
-   }
+  }
 
-   a {
+  a {
     margin-left: 20px;
-   }
+  }
 `;
 
 const HeaderContent = styled.div`
@@ -33,7 +34,7 @@ const HeaderContent = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px; 
+  max-width: 1200px;
 `;
 
 const Logo = styled.div`
@@ -69,7 +70,7 @@ const NavBarContainer = styled.div`
     display: block;
     padding-right: 50px;
   }
-  `;
+`;
 
 const Header: React.FC = () => {
   const [isSidemenuOpen, setIsSidemenuOpen] = useState(false);
@@ -85,19 +86,26 @@ const Header: React.FC = () => {
   return (
     <HeaderWrapper>
       <HeaderContent>
-        <a href="/"><Logo><LogoImg src="/images/logo.png" alt="Logo" /></Logo></a>
-        
+        <a href="/">
+          <Logo>
+            <LogoImg src="/images/logo.png" alt="Logo" />
+          </Logo>
+        </a>
+
         <NavBarContainer>
           <Navbar />
         </NavBarContainer>
-        
+
         <SidemenuContainer>
-          <SidemenuButton isOpen={isSidemenuOpen} toggleSidemenu={toggleSidemenu} />
+          <SidemenuButton
+            $isOpen={isSidemenuOpen}
+            toggleSidemenu={toggleSidemenu}
+          />
           {isSidemenuOpen && <Sidemenu closeSidemenu={closeSidemenu} />}
         </SidemenuContainer>
       </HeaderContent>
     </HeaderWrapper>
   );
-}
+};
 
 export default Header;
