@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import breakpoints from '@/constants/breakpoints';
+import styled from "styled-components";
+import breakpoints from "@/constants/breakpoints";
 
 const ChooseCardContainer = styled.div`
   display: flex;
@@ -64,7 +64,12 @@ interface ChooseCardProps {
   imageAlt: string;
 }
 
-const ChooseCard: React.FC<ChooseCardProps> = ({ title, content, imageSrc, imageAlt }) => {
+const ChooseCard: React.FC<ChooseCardProps> = ({
+  title,
+  content,
+  imageSrc,
+  imageAlt,
+}) => {
   return (
     <ChooseCardContainer>
       <ChooseCardImage src={imageSrc} alt={imageAlt} />

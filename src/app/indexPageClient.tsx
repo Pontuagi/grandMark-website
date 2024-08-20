@@ -4,14 +4,11 @@
 import React from "react";
 import styled from "styled-components";
 import Heading from "../components/Headings/Heading";
-//import Header from "../components/Header/Header";
-//import Footer from "../components/Footer/Footer";
 import ServiceCard from "../components/ServiceCard/ServiceCard";
 import ChooseCard from "@/components/ChooseCard/ChooseCard";
 import ContactCard from "@/components/ContactCard/ContactCard";
 import breakpoints from "@/constants/breakpoints";
 import FAQ from "@/components/Faq/Faq";
-
 
 const PageContainer = styled.div`
   display: flex;
@@ -45,7 +42,7 @@ const ImageCont = styled.div`
 `;
 
 const HomeContainer = styled.div`
- position: absolute;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,7 +104,7 @@ const ServiceSection = styled.div`
   justify-content: center;
   margin-bottom: 100px;
 
-  @media screen and (max-width: ${breakpoints.tablet}){
+  @media screen and (max-width: ${breakpoints.tablet}) {
     gap: 30px;
     margin-bottom: 50px;
   }
@@ -122,8 +119,6 @@ const FaqSection = styled.div`
 const Home: React.FC = () => {
   return (
     <PageContainer>
-      {/*<Header />*/}
-      
       <Content>
         <ImageCont>
           <HomeImage src="/survey.jpeg" alt="grandmark" />
@@ -138,7 +133,7 @@ const Home: React.FC = () => {
               homeowner, developer, or contractor, we have the expertise and
               technology to deliver precise results on time and within budget
             </HomeText>
-        </HomeContainer>
+          </HomeContainer>
         </ImageCont>
         {/*
 
@@ -157,9 +152,9 @@ const Home: React.FC = () => {
         </HomeContainer>
         */}
       </Content>
-      
+
       <Heading heading="Our Services" />
-      
+
       <ServiceSection id="services">
         <ServiceCard
           title="Boundary Surveys"
@@ -200,9 +195,9 @@ const Home: React.FC = () => {
           content="We divide large tracts of land into smaller parcels while complying with local regulations and zoning requirements."
         />
       </ServiceSection>
-      
+
       <Heading heading="Why choose us" />
-      
+
       <ServiceSection id="choose">
         <ChooseCard
           imageSrc="/denno.jpeg"
@@ -233,75 +228,73 @@ const Home: React.FC = () => {
       <Heading heading="FAQ" />
 
       <FaqSection>
-      <FAQ
-                question="What is land surveying?"
-                answer="Land surveying is the process of measuring and mapping out the position, boundaries, and features of a piece of land. It is essential for determining property lines, planning construction projects, and creating accurate maps."
-            />
-            <FAQ
-                question="What is aerial surveying?"
-                answer="Aerial surveying involves collecting data about the Earth's surface using airborne sensors, typically drones or aircraft. This method provides a bird’s-eye view of large areas, allowing for the collection of detailed topographic data, maps, and images."
-            />
-            <FAQ
-                question="How do I know if I need a land survey?"
-                answer="You may need a land survey if you are buying or selling property, constructing a new building, subdividing land, or resolving property boundary disputes. A survey ensures legal and accurate delineation of property boundaries."
-            />
-            <FAQ
-                question="What types of land surveys do you offer?"
-                answer="We offer various types of land surveys, including boundary surveys, topographic surveys, construction staking, subdivision planning, and as-built surveys. We also provide specialized surveys like hydrographic and geodetic surveys."
-            />
-            <FAQ
-                question="What is the difference between a boundary survey and a topographic survey?"
-                answer="A boundary survey focuses on determining the exact property lines of a parcel of land, while a topographic survey maps out the elevation and features of the land, such as trees, buildings, and natural terrain."
-            />
-            <FAQ
-                question="How accurate are your aerial surveys?"
-                answer="Our aerial surveys are highly accurate, often achieving centimeter-level precision using advanced drones equipped with GPS and high-resolution cameras or LiDAR sensors. The accuracy depends on the equipment used and the specific project requirements."
-            />
-            <FAQ
-                question="How long does a typical land survey take?"
-                answer="The duration of a land survey depends on the size and complexity of the property. A small residential lot may take a few days, while larger or more complicated surveys may take several weeks."
-            />
-            <FAQ
-                question="What do I need to provide before you can conduct a survey?"
-                answer="Typically, we need access to the property, any existing legal descriptions, previous surveys, and any relevant permits or land deeds. For aerial surveys, we may also need flight clearances or permissions from local authorities."
-            />
-            <FAQ
-                question="Are your drones and surveyors licensed?"
-                answer="Yes, all our drones are operated by licensed remote pilots, and our land surveyors are certified professionals with the necessary licenses to practice in their respective fields."
-            />
-            <FAQ
-                question="How do you ensure safety during aerial surveys?"
-                answer="Safety is our top priority. We follow strict safety protocols, including pre-flight planning, risk assessments, and compliance with local aviation regulations. Our pilots are trained to handle various scenarios to minimize risk."
-            />
-            <FAQ
-                question="Can aerial surveys be conducted in all weather conditions?"
-                answer="No, aerial surveys are dependent on weather conditions. High winds, heavy rain, and low visibility can affect the quality of the data collected and the safety of the operation. We monitor weather forecasts closely and schedule flights accordingly."
-            />
-            <FAQ
-                question="How much does a land or aerial survey cost?"
-                answer="The cost of a survey depends on factors such as the size of the area, the type of survey, the terrain, and the specific requirements of the project. We provide detailed quotes after assessing the project’s scope."
-            />
-            <FAQ
-                question="What deliverables can I expect from a survey?"
-                answer="Deliverables typically include detailed maps, digital elevation models (DEMs), orthophotos, 3D models, boundary plats, and written reports. The specific deliverables will depend on the type of survey conducted."
-            />
-            <FAQ
-                question="How do I request a survey?"
-                answer="You can request a survey by contacting us directly through our website, phone, or email. We’ll arrange an initial consultation to discuss your needs and provide a tailored quote."
-            />
-            <FAQ
-                question="What are the advantages of using drones for surveying?"
-                answer="Drones offer several advantages, including faster data collection, access to hard-to-reach areas, high-resolution imagery, cost-effectiveness, and the ability to cover large areas quickly."
-            />
-            <FAQ
-                question="Can you help with legal issues related to property boundaries?"
-                answer="Yes, our surveys are often used in legal disputes involving property boundaries. We provide precise data and expert testimony if required to support legal cases."
-            />
+        <FAQ
+          question="What is land surveying?"
+          answer="Land surveying is the process of measuring and mapping out the position, boundaries, and features of a piece of land. It is essential for determining property lines, planning construction projects, and creating accurate maps."
+        />
+        <FAQ
+          question="What is aerial surveying?"
+          answer="Aerial surveying involves collecting data about the Earth's surface using airborne sensors, typically drones or aircraft. This method provides a bird’s-eye view of large areas, allowing for the collection of detailed topographic data, maps, and images."
+        />
+        <FAQ
+          question="How do I know if I need a land survey?"
+          answer="You may need a land survey if you are buying or selling property, constructing a new building, subdividing land, or resolving property boundary disputes. A survey ensures legal and accurate delineation of property boundaries."
+        />
+        <FAQ
+          question="What types of land surveys do you offer?"
+          answer="We offer various types of land surveys, including boundary surveys, topographic surveys, construction staking, subdivision planning, and as-built surveys. We also provide specialized surveys like hydrographic and geodetic surveys."
+        />
+        <FAQ
+          question="What is the difference between a boundary survey and a topographic survey?"
+          answer="A boundary survey focuses on determining the exact property lines of a parcel of land, while a topographic survey maps out the elevation and features of the land, such as trees, buildings, and natural terrain."
+        />
+        <FAQ
+          question="How accurate are your aerial surveys?"
+          answer="Our aerial surveys are highly accurate, often achieving centimeter-level precision using advanced drones equipped with GPS and high-resolution cameras or LiDAR sensors. The accuracy depends on the equipment used and the specific project requirements."
+        />
+        <FAQ
+          question="How long does a typical land survey take?"
+          answer="The duration of a land survey depends on the size and complexity of the property. A small residential lot may take a few days, while larger or more complicated surveys may take several weeks."
+        />
+        <FAQ
+          question="What do I need to provide before you can conduct a survey?"
+          answer="Typically, we need access to the property, any existing legal descriptions, previous surveys, and any relevant permits or land deeds. For aerial surveys, we may also need flight clearances or permissions from local authorities."
+        />
+        <FAQ
+          question="Are your drones and surveyors licensed?"
+          answer="Yes, all our drones are operated by licensed remote pilots, and our land surveyors are certified professionals with the necessary licenses to practice in their respective fields."
+        />
+        <FAQ
+          question="How do you ensure safety during aerial surveys?"
+          answer="Safety is our top priority. We follow strict safety protocols, including pre-flight planning, risk assessments, and compliance with local aviation regulations. Our pilots are trained to handle various scenarios to minimize risk."
+        />
+        <FAQ
+          question="Can aerial surveys be conducted in all weather conditions?"
+          answer="No, aerial surveys are dependent on weather conditions. High winds, heavy rain, and low visibility can affect the quality of the data collected and the safety of the operation. We monitor weather forecasts closely and schedule flights accordingly."
+        />
+        <FAQ
+          question="How much does a land or aerial survey cost?"
+          answer="The cost of a survey depends on factors such as the size of the area, the type of survey, the terrain, and the specific requirements of the project. We provide detailed quotes after assessing the project’s scope."
+        />
+        <FAQ
+          question="What deliverables can I expect from a survey?"
+          answer="Deliverables typically include detailed maps, digital elevation models (DEMs), orthophotos, 3D models, boundary plats, and written reports. The specific deliverables will depend on the type of survey conducted."
+        />
+        <FAQ
+          question="How do I request a survey?"
+          answer="You can request a survey by contacting us directly through our website, phone, or email. We’ll arrange an initial consultation to discuss your needs and provide a tailored quote."
+        />
+        <FAQ
+          question="What are the advantages of using drones for surveying?"
+          answer="Drones offer several advantages, including faster data collection, access to hard-to-reach areas, high-resolution imagery, cost-effectiveness, and the ability to cover large areas quickly."
+        />
+        <FAQ
+          question="Can you help with legal issues related to property boundaries?"
+          answer="Yes, our surveys are often used in legal disputes involving property boundaries. We provide precise data and expert testimony if required to support legal cases."
+        />
       </FaqSection>
 
       <ContactCard />
-      
-      {/*<Footer />*/}
     </PageContainer>
   );
 };

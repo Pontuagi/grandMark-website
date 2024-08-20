@@ -1,7 +1,6 @@
-import styled from 'styled-components';
-import React, { ReactNode } from 'react';
-import breakpoints from '@/constants/breakpoints';
-
+import styled from "styled-components";
+import React, { ReactNode } from "react";
+import breakpoints from "@/constants/breakpoints";
 
 const SectionCardContainer = styled.div`
   display: flex;
@@ -65,12 +64,16 @@ interface SectionCardProps {
   source: string;
 }
 
-const SectionCard: React.FC<SectionCardProps> = ({ title, content, source }) => {
+const SectionCard: React.FC<SectionCardProps> = ({
+  title,
+  content,
+  source,
+}) => {
   return (
     <SectionCardContainer>
       <SectionCardHeader>{title}</SectionCardHeader>
       <IconCont>
-        <Icon src={source} alt="Grandmark"/>
+        <Icon src={source} alt="Grandmark" />
       </IconCont>
       <SectionCardContent>{content}</SectionCardContent>
     </SectionCardContainer>

@@ -1,8 +1,8 @@
 "use client";
 
-import React from 'react';
-import styled from 'styled-components';
-import breakpoints from '@/constants/breakpoints';
+import React from "react";
+import styled from "styled-components";
+import breakpoints from "@/constants/breakpoints";
 
 const FooterWrapper = styled.footer`
   display: flex;
@@ -27,7 +27,7 @@ const FooterContent = styled.div`
     flex-direction: column;
     gap: 20px;
   }
-`
+`;
 
 const NavWrapper = styled.nav`
   ul {
@@ -48,15 +48,15 @@ const NavWrapper = styled.nav`
           color: var(--dark-blue);
         }
       }
-        &:hover::after {
-          content: '';
-          position: absolute;
-          left: -10%;
-          bottom: -2px;
-          width: 120%;
-          height: 3px;
-          background-color: var(--dark-blue);
-        }
+      &:hover::after {
+        content: "";
+        position: absolute;
+        left: -10%;
+        bottom: -2px;
+        width: 120%;
+        height: 3px;
+        background-color: var(--dark-blue);
+      }
     }
   }
 `;
@@ -67,21 +67,33 @@ const Footer: React.FC = () => {
       <FooterContent>
         <NavWrapper>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#services">Services</a></li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/#about">About</a>
+            </li>
+            <li>
+              <a href="/#services">Services</a>
+            </li>
           </ul>
         </NavWrapper>
         <NavWrapper>
           <ul>
-            <li><a href="/privacy">Privacy</a></li>
-            <li><a href="/terms">Terms</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li>
+              <a href="/privacy">Privacy</a>
+            </li>
+            <li>
+              <a href="/terms">Terms</a>
+            </li>
+            <li>
+              <a href="/#contact">Contact</a>
+            </li>
           </ul>
         </NavWrapper>
       </FooterContent>
     </FooterWrapper>
   );
-}
+};
 
 export default Footer;

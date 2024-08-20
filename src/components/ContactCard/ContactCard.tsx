@@ -18,7 +18,7 @@ const ContactCardContainer = styled.div`
     transform: translateY(-5px);
   }
 
-  @media screen and (max-width: ${breakpoints.tablet}){
+  @media screen and (max-width: ${breakpoints.tablet}) {
     max-width: 700px;
   }
 `;
@@ -29,8 +29,8 @@ const ContactCardHeader = styled.h2`
   color: var(--green);
   text-align: center;
   padding: 20px 0;
-  
-  @media screen and (max-width: ${breakpoints.tablet}){
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
     font-size: 20px;
   }
 `;
@@ -43,7 +43,7 @@ const ContactCardContent = styled.p`
   text-align: center;
   padding: 30px;
 
-  @media screen and (max-width: ${breakpoints.tablet}){
+  @media screen and (max-width: ${breakpoints.tablet}) {
     font-size: 18px;
   }
 `;
@@ -108,7 +108,7 @@ const VisionCont = styled.div`
   gap: 70px;
   margin-top: 37px;
 
-  @media screen and (max-width: ${breakpoints.tablet}){
+  @media screen and (max-width: ${breakpoints.tablet}) {
     flex-direction: column;
     gap: 35px;
   }
@@ -130,8 +130,8 @@ const Vision = styled.div`
 `;
 
 const ContactCard: React.FC = () => {
-
-{/*
+  {
+    /*
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -159,7 +159,8 @@ const ContactCard: React.FC = () => {
       alert("Failed to send email.");
     }
   };
-  */}
+  */
+  }
   return (
     <ContactCardContainer>
       <ContactCardHeader id="contact">Contact Us</ContactCardHeader>
@@ -213,15 +214,25 @@ const ContactCard: React.FC = () => {
         {/* Vision */}
         <Vision>
           <p>
-          <span>Vision Statement</span> <br /> <br/>
-          Our vision is to be the leading provider of geospatial services globally, recognized for our commitment to excellence, innovation, and sustainability. We aim to revolutionize how geospatial data is utilized across industries, driving positive change and creating a more connected and informed world.
+            <span>Vision Statement</span> <br /> <br />
+            Our vision is to be the leading provider of geospatial services
+            globally, recognized for our commitment to excellence, innovation,
+            and sustainability. We aim to revolutionize how geospatial data is
+            utilized across industries, driving positive change and creating a
+            more connected and informed world.
           </p>
         </Vision>
         {/* Mission */}
         <Vision>
           <p>
-            <span>Mission Statement </span><br/><br/> 
-            At Grandmark Solutions Limited, our mission is to empower businesses and communities through innovative geospatial solutions. We strive to deliver precise, reliable, and actionable geospatial data and insights, enabling our clients to make informed decisions, optimize operations, and foster sustainable growth.
+            <span>Mission Statement </span>
+            <br />
+            <br />
+            At Grandmark Solutions Limited, our mission is to empower businesses
+            and communities through innovative geospatial solutions. We strive
+            to deliver precise, reliable, and actionable geospatial data and
+            insights, enabling our clients to make informed decisions, optimize
+            operations, and foster sustainable growth.
           </p>
         </Vision>
       </VisionCont>
