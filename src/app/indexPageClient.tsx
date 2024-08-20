@@ -1,10 +1,11 @@
 // indexPageClient.tsx
+"use client";
 
 import React from "react";
 import styled from "styled-components";
 import Heading from "../components/Headings/Heading";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+//import Header from "../components/Header/Header";
+//import Footer from "../components/Footer/Footer";
 import ServiceCard from "../components/ServiceCard/ServiceCard";
 import ChooseCard from "@/components/ChooseCard/ChooseCard";
 import ContactCard from "@/components/ContactCard/ContactCard";
@@ -121,7 +122,7 @@ const FaqSection = styled.div`
 const Home: React.FC = () => {
   return (
     <PageContainer>
-      <Header />
+      {/*<Header />*/}
       
       <Content>
         <ImageCont>
@@ -300,7 +301,7 @@ const Home: React.FC = () => {
 
       <ContactCard />
       
-      <Footer />
+      {/*<Footer />*/}
     </PageContainer>
   );
 };

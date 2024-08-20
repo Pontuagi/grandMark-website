@@ -1,8 +1,8 @@
 // Privacy page client
 import React from 'react';
 import Styled from 'styled-components';
-import Header from '@/components/Header/Header'
-import Footer from '@/components/Footer/Footer'
+//import Header from '@/components/Header/Header'
+//import Footer from '@/components/Footer/Footer'
 
 const Container = Styled.div`
     width: 100%;
@@ -30,7 +30,7 @@ const PrivacyContainer = Styled.div`
 const Privacy: React.FC = () => {
     return (
         <Container>
-        <Header />
+        {/*<Header />*/}
         
         <PrivacyContainer>
         <h1>Privacy Policy</h1>
@@ -219,7 +219,7 @@ const Privacy: React.FC = () => {
         </ul>
         </PrivacyContainer>
 
-        <Footer />
+        {/*<Footer />*/}
         </Container>
     );
 };

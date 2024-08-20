@@ -48,7 +48,7 @@ const Icon = styled.span`
 `;
 
 interface AnswerProps {
-    isVisible: boolean;
+    $isVisible: boolean;
   }
 
 const Answer = styled.div<AnswerProps>`
@@ -57,7 +57,7 @@ const Answer = styled.div<AnswerProps>`
     margin-left: 20px;
     padding: 30px 15px 15px;
     font-size: 16px;
-    display: ${props => (props.isVisible ? 'block' : 'none')};
+    display: ${props => (props.$isVisible ? 'block' : 'none')};
 
     @media screen and (max-width: ${breakpoints.mobile}){
         font-size: 14px;
@@ -77,7 +77,7 @@ const FAQ: React.FC<{ question: string; answer: string }> = ({ question, answer 
                 {question}
                 <Icon>{isVisible ? '−' : '+'}</Icon>
             </Question>
-            <Answer isVisible={isVisible}>{answer}</Answer>
+            <Answer $isVisible={isVisible}>{answer}</Answer>
         </FAQContainer>
     );
 };

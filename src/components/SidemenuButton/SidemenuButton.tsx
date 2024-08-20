@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const ButtonContainer = styled.div`
@@ -36,24 +36,24 @@ const Line = styled.div`
     transition: transform 0.3s ease, opacity 0.3s ease;
 `;
 
-const Line1 = styled(Line)<{ isOpen: boolean }>`
-    transform: ${({ isOpen }) => (isOpen ? 'rotate(45deg)' : 'translateY(-6px)')};
+const Line1 = styled(Line)<{ $isOpen: boolean }>`
+    transform: ${({ $isOpen }) => ($isOpen ? 'rotate(45deg)' : 'translateY(-6px)')};
 `;
 
-const Line2 = styled(Line)<{ isOpen: boolean }>`
-    opacity: ${({ isOpen }) => (isOpen ? 0 : 1)};
+const Line2 = styled(Line)<{ $isOpen: boolean }>`
+    opacity: ${({ $isOpen }) => ($isOpen ? 0 : 1)};
 `;
 
-const Line3 = styled(Line)<{ isOpen: boolean }>`
-    transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'translateY(6px)')};
+const Line3 = styled(Line)<{ $isOpen: boolean }>`
+    transform: ${({ $isOpen }) => ($isOpen ? 'rotate(-45deg)' : 'translateY(6px)')};
 `;
 
 interface SidemenuButtonProps {
-    isOpen: boolean;
+    $isOpen: boolean;
     toggleSidemenu: () => void;
 }
 
-const SidemenuButton: React.FC<SidemenuButtonProps> = ({ isOpen, toggleSidemenu }) => {
+const SidemenuButton: React.FC<SidemenuButtonProps> = ({ $isOpen, toggleSidemenu }) => {
     /*const [isOpen, setIsOpen] = useState(false);*/
 
     const toggleButton = () => {
@@ -69,9 +69,9 @@ const SidemenuButton: React.FC<SidemenuButtonProps> = ({ isOpen, toggleSidemenu 
             onClick={toggleButton}
             onKeyPress={(e) => { if (e.key === 'Enter') toggleButton(); }}
         >
-            <Line1 isOpen={isOpen} />
-            <Line2 isOpen={isOpen} />
-            <Line3 isOpen={isOpen} />
+            <Line1 $isOpen={$isOpen} />
+            <Line2 $isOpen={$isOpen} />
+            <Line3 $isOpen={$isOpen} />
         </ButtonContainer>
     );
 }

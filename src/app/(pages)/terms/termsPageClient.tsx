@@ -1,7 +1,7 @@
-import Footer from '@/components/Footer/Footer';
+//import Footer from '@/components/Footer/Footer';
 import React from 'react';
 import Styled from 'styled-components';
-import Header from '@/components/Header/Header';
+//import Header from '@/components/Header/Header';
 
 const Container = Styled.div`
     width: 100%;
@@ -29,7 +29,7 @@ const TermsCont = Styled.div`
 const Terms: React.FC = () => {
     return (
         <Container>
-        <Header />
+        {/*<Header />*/}
         <TermsCont>
             <h1>Terms and Conditions</h1>
             <p>Last updated: July 24, 2024</p>
@@ -114,7 +114,7 @@ const Terms: React.FC = () => {
             <li>By email: grandmarksolutionsltd@gmail.com</li>
             </ul>
         </TermsCont>
-        <Footer />
+        {/*<Footer />*/}
         </Container>
     );
 };
