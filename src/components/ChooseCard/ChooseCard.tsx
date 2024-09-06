@@ -39,7 +39,7 @@ const ChooseCardHeader = styled.h3`
 
 const ChooseCardContent = styled.p`
   margin: 0;
-  font-size: 23px;
+  font-size: 21px;
   color: var(--black);
   margin-bottom: 25px;
   text-align: center;

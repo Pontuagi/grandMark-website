@@ -1,6 +1,6 @@
 // indexPageClient.tsx
 "use client";
-
+import "./globals.css";
 import React from "react";
 import styled from "styled-components";
 import Heading from "../components/Headings/Heading";

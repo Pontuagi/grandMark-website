@@ -1,98 +1,69 @@
 "use client";
 
 import React from "react";
-import styled from "styled-components";
-import breakpoints from "@/constants/breakpoints";
-
-const FooterWrapper = styled.footer`
-  display: flex;
-  justify-content: center;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 128, 0, 0.8);
-  color: var(--white);
-  width: 100%;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  bottom: 0;
-`;
-
-const FooterContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-
-  @media (max-width: ${breakpoints.tablet}) {
-    flex-direction: column;
-    gap: 20px;
-  }
-`;
-
-const NavWrapper = styled.nav`
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin-right: 30px;
-
-    li {
-      margin-left: 2rem;
-
-      a {
-        color: var(--white);
-        text-decoration: none;
-        font-weight: bold;
-
-        &:hover {
-          color: var(--dark-blue);
-        }
-      }
-      &:hover::after {
-        content: "";
-        position: absolute;
-        left: -10%;
-        bottom: -2px;
-        width: 120%;
-        height: 3px;
-        background-color: var(--dark-blue);
-      }
-    }
-  }
-`;
 
 const Footer: React.FC = () => {
   return (
-    <FooterWrapper>
-      <FooterContent>
-        <NavWrapper>
-          <ul>
-            <li>
-              <a href="/">Home</a>
+    <footer className="flex justify-center px-8 py-4 bg-green-800/80 text-white w-full rounded-t-lg">
+      <div className="flex justify-between items-center w-full max-w-[1200px] flex-col md:flex-row gap-5 md:gap-0">
+        <nav className="flex">
+          <ul className="flex list-none p-0 mr-8">
+            <li className="ml-8">
+              <a
+                href="/"
+                className="text-white font-bold hover:text-blue-900 relative hover:after:content-[''] hover:after:absolute hover:after:left-[-10%] hover:after:bottom-[-2px] hover:after:w-[120%] hover:after:h-[3px] hover:after:bg-blue-900"
+              >
+                Home
+              </a>
             </li>
-            <li>
-              <a href="/#about">About</a>
+            <li className="ml-8">
+              <a
+                href="/#about"
+                className="text-white font-bold hover:text-blue-900 relative hover:after:content-[''] hover:after:absolute hover:after:left-[-10%] hover:after:bottom-[-2px] hover:after:w-[120%] hover:after:h-[3px] hover:after:bg-blue-900"
+              >
+                About
+              </a>
             </li>
-            <li>
-              <a href="/#services">Services</a>
+            <li className="ml-8">
+              <a
+                href="/#services"
+                className="text-white font-bold hover:text-blue-900 relative hover:after:content-[''] hover:after:absolute hover:after:left-[-10%] hover:after:bottom-[-2px] hover:after:w-[120%] hover:after:h-[3px] hover:after:bg-blue-900"
+              >
+                Services
+              </a>
             </li>
           </ul>
-        </NavWrapper>
-        <NavWrapper>
-          <ul>
-            <li>
-              <a href="/privacy">Privacy</a>
+        </nav>
+        <nav className="flex">
+          <ul className="flex list-none p-0">
+            <li className="ml-8">
+              <a
+                href="/privacy"
+                className="text-white font-bold hover:text-blue-900 relative hover:after:content-[''] hover:after:absolute hover:after:left-[-10%] hover:after:bottom-[-2px] hover:after:w-[120%] hover:after:h-[3px] hover:after:bg-blue-900"
+              >
+                Privacy
+              </a>
             </li>
-            <li>
-              <a href="/terms">Terms</a>
+            <li className="ml-8">
+              <a
+                href="/terms"
+                className="text-white font-bold hover:text-blue-900 relative hover:after:content-[''] hover:after:absolute hover:after:left-[-10%] hover:after:bottom-[-2px] hover:after:w-[120%] hover:after:h-[3px] hover:after:bg-blue-900"
+              >
+                Terms
+              </a>
             </li>
-            <li>
-              <a href="/#contact">Contact</a>
+            <li className="ml-8">
+              <a
+                href="/#contact"
+                className="text-white font-bold hover:text-blue-900 relative hover:after:content-[''] hover:after:absolute hover:after:left-[-10%] hover:after:bottom-[-2px] hover:after:w-[120%] hover:after:h-[3px] hover:after:bg-blue-900"
+              >
+                Contact
+              </a>
             </li>
           </ul>
-        </NavWrapper>
-      </FooterContent>
-    </FooterWrapper>
+        </nav>
+      </div>
+    </footer>
   );
 };
 
