@@ -1,7 +1,8 @@
 // indexPageClient.tsx
-"use client";
-import "./globals.css";
-import React from "react";
+import "@/app/globals.css";
+import React, { ReactElement } from "react";
+import Layout from "@/components/layout";
+import type { NextPageWithLayout } from './_app'
 import styled from "styled-components";
 import Heading from "../components/Headings/Heading";
 import ServiceCard from "../components/ServiceCard/ServiceCard";
@@ -118,7 +119,7 @@ const FaqSection = styled.div`
   padding: 20px;
 `;
 
-const Home: React.FC = () => {
+const Page: NextPageWithLayout = () => {
   return (
     <PageContainer>
       <Content>
@@ -137,22 +138,6 @@ const Home: React.FC = () => {
             </HomeText>
           </HomeContainer>
         </ImageCont>
-        {/*
-
-        <HomeContainer id="about">
-          <HomeText>
-            <span>
-              GrandMark Solutions limited Your Trusted Geospatial Experts.
-            </span>{" "}
-            <br /> <br />
-            At Grandmark, we specialize in providing accurate and reliable
-            geospatial services to meet all your needs. Whether you're a
-            homeowner, developer, or contractor, we have the expertise and
-            technology to deliver precise results on time and within budget
-          </HomeText>
-          
-        </HomeContainer>
-        */}
       </Content>
 
       <Heading heading="Our Services" />
@@ -301,4 +286,12 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+Page.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+};
+
+export default Page;

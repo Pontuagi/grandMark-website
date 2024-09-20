@@ -1,5 +1,7 @@
 // Privacy page client
-import React from "react";
+import React, { ReactElement } from "react";
+import Layout from "@/components/layout";
+import type { NextPageWithLayout } from '../_app'
 import Styled from "styled-components";
 
 const PrivacyContainer = Styled.div`
@@ -19,7 +21,7 @@ const PrivacyContainer = Styled.div`
     }
 `;
 
-const Privacy: React.FC = () => {
+const Privacy: NextPageWithLayout = () => {
   return (
     <PrivacyContainer>
       <h1>Privacy Policy</h1>
@@ -529,6 +531,14 @@ const Privacy: React.FC = () => {
       </ul>
     </PrivacyContainer>
   );
+};
+
+Privacy.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
 };
 
 export default Privacy;

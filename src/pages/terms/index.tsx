@@ -1,4 +1,6 @@
-import React from "react";
+import React, { ReactElement } from "react";
+import Layout from "@/components/layout";
+import type { NextPageWithLayout } from '../_app'
 import Styled from "styled-components";
 
 const TermsCont = Styled.div`
@@ -18,7 +20,7 @@ const TermsCont = Styled.div`
     }
 `;
 
-const Terms: React.FC = () => {
+const Terms: NextPageWithLayout = () => {
   return (
     <TermsCont>
       <h1>Terms and Conditions</h1>
@@ -314,6 +316,14 @@ const Terms: React.FC = () => {
       </ul>
     </TermsCont>
   );
+};
+
+Terms.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
 };
 
 export default Terms;
