@@ -1,19 +1,16 @@
-"use client";
-
 import React from "react";
 import styled from "styled-components";
 import breakpoints from "@/constants/breakpoints";
 
-const FooterWrapper = styled.footer`
+// Styled components for the Footer
+const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 128, 0, 0.8);
+  padding: 16px 32px;
+  background-color: rgba(0, 128, 0, 0.8); /* bg-green-800/80 equivalent */
   color: var(--white);
   width: 100%;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  bottom: 0;
+  border-radius: 10px 10px 0 0;
 `;
 
 const FooterContent = styled.div`
@@ -22,77 +19,97 @@ const FooterContent = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1200px;
+  flex-direction: column;
+  gap: 20px;
 
-  @media (max-width: ${breakpoints.tablet}) {
-    flex-direction: column;
-    gap: 20px;
+  @media screen and (min-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+    gap: 0;
   }
 `;
 
-const NavWrapper = styled.nav`
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin-right: 30px;
+const Nav = styled.nav`
+  display: flex;
+`;
 
-    li {
-      margin-left: 2rem;
+const NavList = styled.ul`
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
 
-      a {
-        color: var(--white);
-        text-decoration: none;
-        font-weight: bold;
+  @media screen and (min-width: ${breakpoints.tablet}) {
+    gap: 32px;
+  }
+`;
 
-        &:hover {
-          color: var(--dark-blue);
-        }
-      }
-      &:hover::after {
-        content: "";
-        position: absolute;
-        left: -10%;
-        bottom: -2px;
-        width: 120%;
-        height: 3px;
-        background-color: var(--dark-blue);
-      }
+const NavItem = styled.li`
+  margin-left: 16px;
+
+  a {
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      color: var(--blue);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: -10%;
+      width: 120%;
+      height: 3px;
+      background-color: var(--blue);
+      transition: opacity 0.3s, transform 0.3s;
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: scaleX(1);
     }
   }
 `;
 
 const Footer: React.FC = () => {
   return (
-    <FooterWrapper>
+    <FooterContainer>
       <FooterContent>
-        <NavWrapper>
-          <ul>
-            <li>
+        <Nav>
+          <NavList>
+            <NavItem>
               <a href="/">Home</a>
-            </li>
-            <li>
+            </NavItem>
+            <NavItem>
               <a href="/#about">About</a>
-            </li>
-            <li>
+            </NavItem>
+            <NavItem>
               <a href="/#services">Services</a>
-            </li>
-          </ul>
-        </NavWrapper>
-        <NavWrapper>
-          <ul>
-            <li>
+            </NavItem>
+          </NavList>
+        </Nav>
+
+        <Nav>
+          <NavList>
+            <NavItem>
               <a href="/privacy">Privacy</a>
-            </li>
-            <li>
+            </NavItem>
+            <NavItem>
               <a href="/terms">Terms</a>
-            </li>
-            <li>
+            </NavItem>
+            <NavItem>
               <a href="/#contact">Contact</a>
-            </li>
-          </ul>
-        </NavWrapper>
+            </NavItem>
+          </NavList>
+        </Nav>
       </FooterContent>
-    </FooterWrapper>
+    </FooterContainer>
   );
 };
 

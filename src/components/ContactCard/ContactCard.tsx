@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import breakpoints from "@/constants/breakpoints";
 
@@ -59,49 +59,6 @@ const ContactCardDetails = styled.div`
   }
 `;
 
-const ContactForm = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  align-items: center;
-`;
-
-const Input = styled.input`
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 18px;
-`;
-
-const Textarea = styled.textarea`
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 18px;
-  height: 100px;
-`;
-
-const Button = styled.button`
-  padding: 10px;
-  font-size: 18px;
-  background-color: var(--green);
-  color: var(--white);
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 300px;
-  border-radius: 5px;
-  align-items: center;
-
-  &:hover {
-    background-color: darkgreen;
-  }
-`;
-
 const VisionCont = styled.div`
   display: flex;
   flex-direction: row;
@@ -130,37 +87,6 @@ const Vision = styled.div`
 `;
 
 const ContactCard: React.FC = () => {
-  {
-    /*
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (res.ok) {
-      alert("Email sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      alert("Failed to send email.");
-    }
-  };
-  */
-  }
   return (
     <ContactCardContainer>
       <ContactCardHeader id="contact">Contact Us</ContactCardHeader>
@@ -180,36 +106,7 @@ const ContactCard: React.FC = () => {
           Tel No:<span>+254723988691</span>
         </p>
       </ContactCardDetails>
-      {/*
-      <ContactForm>
-        <Form onSubmit={handleSubmit}>
-          <Input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <Input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <Textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-          <Button type="submit">Send</Button>
-        </Form>
-      </ContactForm>
-      */}
+      
       <VisionCont>
         {/* Vision */}
         <Vision>

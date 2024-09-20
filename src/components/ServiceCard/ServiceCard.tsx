@@ -37,7 +37,7 @@ const SectionCardHeader = styled.h2`
 
 const SectionCardContent = styled.p`
   margin: 0;
-  font-size: 23px;
+  font-size: 21px;
   color: var(--black);
   margin-bottom: 20px;
   text-align: center;
