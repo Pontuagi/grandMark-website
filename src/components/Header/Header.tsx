@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from "react";
 import styled from "styled-components";
 import breakpoints from "@/constants/breakpoints";
@@ -50,7 +51,7 @@ const NavWrapper = styled.nav`
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-right: 20px;
     gap: 20px;
 
     li {

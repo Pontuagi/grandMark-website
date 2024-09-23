@@ -15,9 +15,13 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   width: 100%;
   margin: 0 auto;
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    margin-left: 30px;
+  }
 `;
 
 const Content = styled.div`
@@ -106,6 +110,7 @@ const ServiceSection = styled.div`
   gap: 70px;
   justify-content: center;
   margin-bottom: 100px;
+  max-width: 1200px;
 
   @media screen and (max-width: ${breakpoints.tablet}) {
     gap: 30px;
