@@ -89,8 +89,8 @@ const SidemenuContainer = styled.div`
 const SidemenuWrapper = styled.div<{ $isOpen: boolean }>`
   display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
   flex-direction: column;
-  background-color: var(--green);
-  height: 100vh;
+  background-color: rgba(0, 128, 0, 0.8);
+  height: 37vh;
   width: 280px;
   padding: 40px;
   position: fixed;
@@ -99,6 +99,17 @@ const SidemenuWrapper = styled.div<{ $isOpen: boolean }>`
   z-index: 1000;
   border-radius: 10px 0 0 10px;
   border: 3px solid var(--white);
+`;
+
+const Overlay = styled.div<{ $isOpen: boolean }>`
+  display: ${({ $isOpen }) => ($isOpen ? "block" : "none")};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); // Semi-transparent background
+  z-index: 999; // Ensure it's below the sidemenu but above other content
 `;
 
 const MenuContainer = styled.li`
@@ -142,7 +153,7 @@ const ButtonContainer = styled.div`
   box-shadow: 0 0 5px 2px rgba(0, 128, 0, 0.2);
   cursor: pointer;
   position: relative;
-  z-index: 999;
+  z-index: 1100;
   margin-left: 20px;
 
   &:hover {
@@ -209,6 +220,8 @@ const Header: React.FC = () => {
             </li>
           </ul>
         </NavWrapper>
+
+        <Overlay $isOpen={isSidemenuOpen} onClick={closeSidemenu} />
 
         {/* Mobile Sidemenu Button */}
         <SidemenuContainer>
