@@ -89,7 +89,7 @@ const Vision = styled.div`
 const ContactCard: React.FC = () => {
   return (
     <ContactCardContainer>
-      <ContactCardHeader id="contact">Contact Us</ContactCardHeader>
+      <ContactCardHeader>Contact Us</ContactCardHeader>
       <ContactCardContent>
         Ready to start your surveying project? Contact us today to schedule a
         consultation and learn how Grandmark Solutions can assist you with your

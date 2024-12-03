@@ -5,8 +5,9 @@ import breakpoints from "@/constants/breakpoints";
 // Styled components for the Footer
 const FooterContainer = styled.footer`
   display: flex;
-  justify-content: center;
-  padding: 16px 32px;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px;
   background-color: rgba(0, 128, 0, 0.8); /* bg-green-800/80 equivalent */
   color: var(--white);
   width: 100%;
@@ -14,101 +15,160 @@ const FooterContainer = styled.footer`
 `;
 
 const FooterContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
   width: 100%;
   max-width: 1200px;
-  flex-direction: column;
-  gap: 20px;
 
   @media screen and (min-width: ${breakpoints.tablet}) {
-    flex-direction: row;
-    gap: 0;
+    grid-template-columns: repeat(4, 1fr);
   }
+`;
+
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+`;
+
+const Logo = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Nav = styled.nav`
   display: flex;
+  flex-direction: column;
+  gap: 8px;
 `;
 
 const NavList = styled.ul`
-  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px;
-
-  @media screen and (min-width: ${breakpoints.tablet}) {
-    gap: 32px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 `;
 
 const NavItem = styled.li`
-  margin-left: 16px;
-
   a {
-    color: var(--white);
+    color: var(--black);
     font-weight: bold;
     text-decoration: none;
-    position: relative;
 
     &:hover {
       color: var(--blue);
     }
+  }
+`;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: -10%;
-      width: 120%;
-      height: 3px;
-      background-color: var(--blue);
-      transition: opacity 0.3s, transform 0.3s;
-      opacity: 0;
-      transform: scaleX(0);
-    }
+const SocialIcons = styled.div`
+  display: flex;
+  gap: 16px;
+  a {
+    color: var(--white);
+    font-size: 1.5rem;
 
-    &:hover::after {
-      opacity: 1;
-      transform: scaleX(1);
+    &:hover {
+      color: var(--blue);
     }
   }
+`;
+
+const Copyright = styled.div`
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--white);
 `;
 
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        <Nav>
-          <NavList>
-            <NavItem>
-              <a href="/">Home</a>
-            </NavItem>
-            <NavItem>
-              <a href="/#about">About</a>
-            </NavItem>
-            <NavItem>
-              <a href="/#services">Services</a>
-            </NavItem>
-          </NavList>
-        </Nav>
+        {/* Logo and Company Name */}
+        <Column>
+          <Logo>
+            <div>Grandmark Solutions</div>
+          </Logo>
+        </Column>
 
-        <Nav>
-          <NavList>
-            <NavItem>
-              <a href="/privacy">Privacy</a>
-            </NavItem>
-            <NavItem>
-              <a href="/terms">Terms</a>
-            </NavItem>
-            <NavItem>
-              <a href="/#contact">Contact</a>
-            </NavItem>
-          </NavList>
-        </Nav>
+        {/* Quick Links */}
+        <Column>
+          <h4>Quick Links</h4>
+          <Nav>
+            <NavList>
+              <NavItem>
+                <a href="/">Home</a>
+              </NavItem>
+              <NavItem>
+                <a href="/#about">About</a>
+              </NavItem>
+              <NavItem>
+                <a href="/#services">Services</a>
+              </NavItem>
+              <NavItem>
+                <a href="/privacy">Privacy</a>
+              </NavItem>
+              <NavItem>
+                <a href="/terms">Terms</a>
+              </NavItem>
+              <NavItem>
+                <a href="/#contact">Contact</a>
+              </NavItem>
+              <NavItem>
+                <a href="/#faq">FAQ</a>
+              </NavItem>
+            </NavList>
+          </Nav>
+        </Column>
+
+        {/* Products */}
+        <Column>
+          <h4>Products</h4>
+          <Nav>
+            <NavList>
+              <NavItem>Boundary Surveys</NavItem>
+              <NavItem>Topographic Surveys</NavItem>
+              <NavItem>Land Titling</NavItem>
+              <NavItem>Engineering Surveys</NavItem>
+              <NavItem>Sectional Properties Surveys</NavItem>
+              <NavItem>Drones Surveys</NavItem>
+              <NavItem>Subdivision Surveys</NavItem>
+              
+            </NavList>
+          </Nav>
+        </Column>
+
+        {/* Social Media Links */}
+        <Column>
+          <h4>Socials</h4>
+          <SocialIcons>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram"></i>
+            </a>
+          </SocialIcons>
+        </Column>
       </FooterContent>
+
+      {/* Copyright Text */}
+      <Copyright>
+        © {new Date().getFullYear()} Grandmark Solutions Ltd. All rights reserved.
+      </Copyright>
     </FooterContainer>
   );
 };

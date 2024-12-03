@@ -10,6 +10,7 @@ import ChooseCard from "@/components/ChooseCard/ChooseCard";
 import ContactCard from "@/components/ContactCard/ContactCard";
 import breakpoints from "@/constants/breakpoints";
 import FAQ from "@/components/Faq/Faq";
+import { TemplateContext } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 const PageContainer = styled.div`
   display: flex;
@@ -124,6 +125,49 @@ const FaqSection = styled.div`
   padding: 20px;
 `;
 
+const Space = styled.div`
+  height: 1px;
+`
+export const TeamSection = styled.section`
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* Light background */
+  text-align: center;
+`;
+
+
+// Individual team member card
+export const Team = styled.div`
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  width: 150px;
+`;
+
+// Team member image
+export const TeamImage = styled.img`
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #ddd;
+`;
+
+// Team member name
+export const TeamName = styled.h3`
+  font-size: 1.25rem;
+  margin: 8px 0 4px;
+  color: #333;
+  font-weight: bold;
+`;
+
+// Team member position
+export const TeamPosition = styled.p`
+  font-size: 0.875rem;
+  color: #666; /* Subtle gray for position text */
+  margin: 0;
+`;
+
 const Page: NextPageWithLayout = () => {
   return (
     <PageContainer>
@@ -144,10 +188,10 @@ const Page: NextPageWithLayout = () => {
           </HomeContainer>
         </ImageCont>
       </Content>
-
+      <Space id="services" />
       <Heading heading="Our Services" />
 
-      <ServiceSection id="services">
+      <ServiceSection >
         <ServiceCard
           title="Boundary Surveys"
           content="We accurately determine property lines and boundaries to prevent legal disputes and ensure proper land use."
@@ -187,10 +231,10 @@ const Page: NextPageWithLayout = () => {
           content="We divide large tracts of land into smaller parcels while complying with local regulations and zoning requirements."
         />
       </ServiceSection>
-
+      <Space id="choose" />
       <Heading heading="Why choose us" />
 
-      <ServiceSection id="choose">
+      <ServiceSection >
         <ChooseCard
           imageSrc="/denno.jpeg"
           imageAlt="experience"
@@ -217,7 +261,7 @@ const Page: NextPageWithLayout = () => {
         />
       </ServiceSection>
 
-      <Heading heading="FAQ" />
+      <Heading heading="FAQ"/>
 
       <FaqSection>
         <FAQ
@@ -286,7 +330,16 @@ const Page: NextPageWithLayout = () => {
         />
       </FaqSection>
 
+      <Space id="contact"/>
       <ContactCard />
+      <TeamSection>
+        <Heading heading="Meet the Grandmark team" />
+        <Team>
+        <TeamImage src="/denno.jpeg" alt="John Doe" />
+        <TeamName>Dennis Korir</TeamName>
+        <TeamPosition>CEO</TeamPosition>
+      </Team>
+      </TeamSection>
     </PageContainer>
   );
 };
